@@ -36,8 +36,6 @@ def add_key(new_path, string):
 
             if previous_key != current_key:
                 f.write(i)
-            else:
-                break
 
         f.truncate()
 
