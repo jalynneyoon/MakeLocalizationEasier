@@ -11,7 +11,7 @@ def write_localizable_files(localize_dict):
 
         fp = open(new_path + '/' + 'Localizable.strings', 'a')
         for idx, string in enumerate(value):
-            if idx + 2 < min_row or idx + 2 > max_row:
+            if idx + 3 < min_row or idx + 3 > max_row:
                 continue
 
             if '= "";' in string or " = " not in string:
@@ -36,8 +36,6 @@ def add_key(new_path, string):
 
             if previous_key != current_key:
                 f.write(i)
-            else:
-                break
 
         f.truncate()
 
@@ -49,7 +47,7 @@ min_row, max_row = map(int, input("text your range: ").split())
 
 file_name = "/Users/yunjohyeon/Downloads/번역배치파일.xlsx"
 sheet_name = "★번역요청"
-target_path = "/Users/yunjohyeon/Downloads"
+target_path = "/Users/yunjohyeon/ssm-mobile-ios/SinsangMarket"
 
 
 data = pd.ExcelFile(file_name).parse(sheet_name)
