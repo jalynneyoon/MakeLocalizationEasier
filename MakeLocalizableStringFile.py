@@ -55,9 +55,9 @@ def check_duplicated_key(new_path, string):
 # target_path = input("target path: ").rstrip()
 min_row, max_row = map(int, input("text your range: ").split())
 
-file_name = "/Users/johyeonyoon/Downloads/번역배치파일.xlsx"
+file_name = "/Users/yunjohyeon/Downloads/번역배치파일.xlsx"
 sheet_name = "★번역요청"
-target_path = "/Users/johyeonyoon/ssm-mobile-ios/SinsangMarket"
+target_path = "/Users/yunjohyeon/ssm-mobile-ios/SinsangMarket"
 
 
 data = pd.ExcelFile(file_name).parse(sheet_name)
