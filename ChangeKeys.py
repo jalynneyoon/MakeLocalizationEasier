@@ -10,12 +10,13 @@ import os
 # file_name = input("file name: ").rstrip()
 # sheet_name = input("sheet name: ").rstrip()
 # directory_path = input("target path: ").rstrip()
-file_name = "/Users/yunjohyeon/Downloads/KeyChanging.xlsx"
-sheet_name = "변경"
+file_name = "/Users/yunjohyeon/Downloads/번역배치파일.xlsx"
+sheet_name = "모웹 통합 시트"
 
 data = pd.ExcelFile(file_name).parse(sheet_name)
-previous_list = list(map(str.strip, data['기존키값']))
-current_list = list(map(str.strip, data['바뀐키값']))
+print(data)
+previous_list = list(map(str, data['모바일 키']))
+current_list = list(map(str, data['key']))
 directory_path = "/Users/yunjohyeon/ssm-mobile-ios/SinsangMarket_Some"
 
 
@@ -29,7 +30,7 @@ def change_key(path):
     for idx, line in enumerate(fp.readlines()):
         new_line = line
         for idx in range(0, len(previous_list)):
-            if previous_list[idx] in line:
+            if '\"' + previous_list[idx] + '\"' in line:
                 print("** 중복 값 있음: ", previous_list[idx])
                 new_line = line.replace(previous_list[idx], current_list[idx])
                 print("** 변경된 값: ", new_line.lstrip())
