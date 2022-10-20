@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4784025b-7de0-4d17-ade7-879aa8614c08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MakeLocalizableStringFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/MakeLocalizableStringFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChangeKeys.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChangeKeys.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
