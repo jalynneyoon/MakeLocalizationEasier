@@ -13,32 +13,15 @@ new_sheet = "모웹 통합 시트"
 previous_data = pd.read_excel(file_name, sheet_name=previous_sheet, skiprows=[1, 2], usecols='G:J, T')
 previous_list = previous_data.values.tolist() # 한, 영, 중, 일 순
 
-# for data in previous_list:
-#     print(data)
-
-
 new_data = pd.read_excel(file_name, sheet_name=new_sheet, usecols='A,D:G')
 new_list = new_data.values.tolist() # 키, 한 중 영 일
-#
-# for data in new_list:
-#     print(data)
 
-# korean = list(filter(lambda u: u != "nan", map(str, df['Unnamed: 19'])))
-# english = list(filter(lambda u: u != "nan", map(str, df['Unnamed: 20'])))
-# chinese = list(filter(lambda u: u != "nan", map(str, df['Unnamed: 21'])))
-# japanese = list(filter(lambda u: u != "nan", map(str, df['Unnamed: 22'])))
-
-# localize_dict = {"ko": korean, "en": english, "zh-Hans": chinese, "ja": japanese}
-# print("ko ", korean)
-
-#
 
 def isNaN(num):
     return num != num
 
 for n_data in new_list:
     n_key, n_ko, n_zh, n_en, n_ja = n_data
-    # print("키 검사: ", n_key)
     for p_data in previous_list:
         if isNaN(p_data[-1]):
             continue
